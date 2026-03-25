@@ -1,8 +1,7 @@
 package application;
 
-import java.util.Date;
-
-import model.entities.Department;
+import model.dao.DaoFactory;
+import model.dao.SellerDao;
 import model.entities.Seller;
 
 public class App {
@@ -10,9 +9,9 @@ public class App {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Department dp = new Department(1, "Jogos");
-	
-		Seller seller = new Seller(21, "Joao", "joao@emial", new Date(), 8900.65, dp);
+		SellerDao dao = DaoFactory.createSellerDao();
+		Seller seller = dao.findById(3);
+		
 		System.out.println(seller);
 	}
 
