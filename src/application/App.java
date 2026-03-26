@@ -18,13 +18,18 @@ public class App {
 		Seller seller = dao.findById(3);
 		System.out.println(seller);
 		
-		System.out.println("--------------- TEST 2 ---------------");
+		System.out.println("\n--------------- TEST 2 ---------------");
 		Department dep = new Department(2, null);
 		List<Seller> list = dao.findbyDepartment(dep);
 		list.forEach(s -> {
 			System.out.println(s);
 		});
 		
+		System.out.println("\n--------------- TEST 3 ---------------");
+		list = dao.findAll();
+		list.forEach(s -> {
+			System.out.println(s);
+		});
 	}
 
 }
