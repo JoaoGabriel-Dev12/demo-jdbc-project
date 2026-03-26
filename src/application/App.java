@@ -1,5 +1,6 @@
 package application;
 
+import java.util.Date;
 import java.util.List;
 
 import model.dao.DaoFactory;
@@ -30,6 +31,20 @@ public class App {
 		list.forEach(s -> {
 			System.out.println(s);
 		});
+		
+		//System.out.println("\n--------------- TEST 4 ---------------");
+		//Seller newSeller = new Seller(null, "Bob", "bobo@email", new Date(), 4500.90, dep);
+		//dao.insert(newSeller);
+		//System.out.println("Created! id = " +newSeller.getId());
+	
+		System.out.println("\n--------------- TEST 5 ---------------");
+		Seller sellerUp = dao.findById(11);
+		sellerUp.setName("Joao Vitor");
+		sellerUp.setEmail("joao.vitor@email");
+		dao.update(sellerUp);
+		System.out.println("Updated complete");
+		
+		
 	}
 
 }
