@@ -44,7 +44,9 @@ public class App {
 		dao.update(sellerUp);
 		System.out.println("Updated complete");
 		
-		
+		System.out.println("\n--------------- TEST 6 ---------------");
+		dao.deleteById(12);
+		System.out.println("Deleted completed");
 	}
 
 }
