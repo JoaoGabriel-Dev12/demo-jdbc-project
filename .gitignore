@@ -1,3 +1,7 @@
+#Config
+*.properties
+.settings
+
 # Compiled class file
 *.class
 
