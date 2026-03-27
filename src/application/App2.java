@@ -35,6 +35,10 @@ public class App2 {
 		list.forEach(d -> {
 			System.out.println(d);
 		});
+		
+		System.out.println("\n-------------- Teste 5 -> delete department by id--------------");
+		dao.deleteById(7);
+		System.out.println("Delete executed!");
 	}
 
 }
