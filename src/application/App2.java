@@ -1,5 +1,7 @@
 package application;
 
+import java.util.List;
+
 import model.dao.DaoFactory;
 import model.dao.DepartmentDao;
 import model.entities.Department;
@@ -27,6 +29,12 @@ public class App2 {
 		depUp.setName("Backend");
 		dao.update(depUp);
 		System.out.println("Updated complete!");
+		
+		System.out.println("\n-------------- Teste 4 -> findAll department--------------");
+		List<Department> list = dao.findAll();
+		list.forEach(d -> {
+			System.out.println(d);
+		});
 	}
 
 }
